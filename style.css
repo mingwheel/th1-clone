@@ -1,0 +1,95 @@
+/* GLOBAL */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+}
+
+/* Navbar */
+.navbar {
+  font-size: 14px;
+  font-family: "Montserrat";
+  letter-spacing: 1px;
+  position: fixed;
+  padding: 2em 1em;
+  z-index: 99;
+  width: 100vw;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navbar > .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+.navbar-menu {
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+}
+.navbar-menu li {
+  padding: 1em;
+}
+.navbar-brand {
+  display: inline-block;
+}
+.navbar-right {
+  align-content: right;
+}
+
+/* Hero */
+header.hero {
+  text-align: center;
+  color: #fff;
+  background-image: url(https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+.hero-text {
+  padding: 300px 0 200px 0;
+}
+.intro-lead {
+  font-family: "Noto Serif", serif;
+  font-size: 2.5em;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+.intro-heading {
+  font-family: "Montserrat";
+  font-size: 4.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 75px;
+  margin-bottom: 0.5em;
+}
+.hero-text button {
+  color: #fff;
+  background-color: #fed135;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1em 2em;
+}
+.hero-text button:hover {
+  background-color: #fec810;
+}
