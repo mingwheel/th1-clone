@@ -2,4 +2,4 @@
 
 This is a beginner project for me to practice my **HTML, CSS and JavaScript** skills after 1 month+ of learning.
 
-This is the [original website](https://blackrockdigital.github.io/startbootstrap-agency/)
+Here is the [**original website**](https://blackrockdigital.github.io/startbootstrap-agency/) that I referenced.
