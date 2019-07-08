@@ -17,6 +17,7 @@ body {
 }
 
 .container {
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1em;
@@ -26,10 +27,8 @@ h4 {
   font-size: 1.5rem;
 }
 
-:target {
-  padding-top: var(--navbar-height);
-  margin-top: calc(-1 * var(--navbar-height));
-  display: inline-block;
+p {
+  line-height: 1.75;
 }
 
 /* Navbar */
@@ -38,7 +37,7 @@ h4 {
   font-family: "Montserrat";
   position: fixed;
   padding: 2em 1em;
-  z-index: 99;
+  z-index: 100;
   width: 100%;
 }
 .navbar a {
@@ -49,8 +48,6 @@ h4 {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1140px;
 }
 .navbar-menu {
   display: inline-flex;
@@ -64,6 +61,9 @@ h4 {
   padding: 1em;
 }
 .navbar-menu a:hover {
+  color: var(--color-main);
+}
+.navbar-menu .active {
   color: var(--color-main);
 }
 .navbar-brand {
@@ -88,7 +88,7 @@ h4 {
 header.hero {
   text-align: center;
   color: #fff;
-  background-image: url(https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg);
+  background-image: url(https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg) !important;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -129,14 +129,17 @@ header.hero {
 
 /* Section - General */
 .page-section {
-  padding-top: calc(100px + var(--navbar-height));
-  padding-bottom: calc(100px - var(--navbar-height));
+  padding: 100px 0;
 }
 .page-section > .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.page-section:nth-child(2n) {
+  background-color: #f8f9fa;
+}
+
 .section-heading {
   flex-basis: 100%;
   font-family: "Montserrat";
@@ -167,6 +170,7 @@ header.hero {
   flex-basis: 33%;
   align-items: center;
   padding: 0 1em;
+  text-align: center;
 }
 .service-item i:first-child {
   color: var(--color-main);
@@ -174,6 +178,31 @@ header.hero {
 .service-item p {
   color: var(--color-muted);
   margin: 0 0 1rem;
+}
+
+/* Section - Portfolio */
+.portfolio-item {
+  background-color: #fff;
+  flex-basis: 30%;
+  margin-bottom: 30px;
+}
+.portfolio-link {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+}
+.portfolio-caption {
+  padding: 25px;
   text-align: center;
-  line-height: 1.75;
+}
+.portfolio-caption h4 {
+  font-family: "Montserrat";
+  margin: 0;
+}
+.portfolio-caption p {
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 0;
 }
