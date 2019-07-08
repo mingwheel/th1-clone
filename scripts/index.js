@@ -15,7 +15,15 @@ function fixNav() {
   }
 }
 
-window.addEventListener("scroll", throttle(fixNav, 20));
+window.addEventListener("scroll", throttle(fixNav, 15));
+
+// run fixNav on page reload
+if (performance.navigation.type == 1) {
+  fixNav();
+  console.info("This page is reloaded");
+} else {
+  console.info("This page is not reloaded");
+}
 
 //  throttle scroll
 function throttle(fn, wait) {

@@ -25,6 +25,7 @@ body {
 h4 {
   font-size: 1.5rem;
 }
+
 :target {
   padding-top: var(--navbar-height);
   margin-top: calc(-1 * var(--navbar-height));
