@@ -8,6 +8,7 @@
 :root {
   --color-muted: #6c757d;
   --color-main: #fed135;
+  --navbar-height: 54px;
 }
 
 body {
@@ -23,6 +24,11 @@ body {
 
 h4 {
   font-size: 1.5rem;
+}
+:target {
+  padding-top: var(--navbar-height);
+  margin-top: calc(-1 * var(--navbar-height));
+  display: inline-block;
 }
 
 /* Navbar */
@@ -64,6 +70,7 @@ h4 {
   display: inline-block;
   font-family: "Kaushan Script";
   font-size: 1.75em;
+  line-height: 30px;
   transition: font-size 0.2s linear;
 }
 
@@ -121,7 +128,8 @@ header.hero {
 
 /* Section - General */
 .page-section {
-  padding: 100px 0;
+  padding-top: calc(100px + var(--navbar-height));
+  padding-bottom: calc(100px - var(--navbar-height));
 }
 .page-section > .container {
   display: flex;
@@ -133,7 +141,7 @@ header.hero {
   font-family: "Montserrat";
   font-size: 40px;
   line-height: 1.2;
-  margin: 0 0 15px 0;
+  margin: 0 0 15px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -143,7 +151,7 @@ header.hero {
   font-weight: 400;
   font-size: 16px;
   font-style: italic;
-  margin: 0 0 75px 0;
+  margin: 0 0 75px;
   text-align: center;
 }
 
@@ -164,7 +172,7 @@ header.hero {
 }
 .service-item p {
   color: var(--color-muted);
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
   text-align: center;
   line-height: 1.75;
 }
