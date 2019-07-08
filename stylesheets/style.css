@@ -12,6 +12,7 @@
 
 body {
   font-family: "Roboto Slab", serif;
+  overscroll-behavior-y: none;
 }
 
 .container {
@@ -31,7 +32,7 @@ h4 {
   position: fixed;
   padding: 2em 1em;
   z-index: 99;
-  width: calc(100vw - 1em);
+  width: 100%;
 }
 .navbar a {
   color: #fff;
@@ -63,7 +64,7 @@ h4 {
   display: inline-block;
   font-family: "Kaushan Script";
   font-size: 1.75em;
-  transition: font-size 0.3s linear;
+  transition: font-size 0.2s linear;
 }
 
 .navbar-shrink {
