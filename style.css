@@ -7,7 +7,7 @@
 
 :root {
   --color-muted: #6c757d;
-  --color-main: #fec810;
+  --color-main: #fed135;
 }
 
 body {
@@ -26,11 +26,12 @@ h4 {
 
 /* Navbar */
 .navbar {
+  transition: padding-top 0.3s, padding-bottom 0.3s;
   font-family: "Montserrat";
   position: fixed;
   padding: 2em 1em;
   z-index: 99;
-  width: 100vw;
+  width: calc(100vw - 1em);
 }
 .navbar a {
   color: #fff;
@@ -57,11 +58,21 @@ h4 {
 .navbar-menu a:hover {
   color: var(--color-main);
 }
-a.navbar-brand {
-  color: var(--color-main);
+.navbar-brand {
+  color: var(--color-main) !important;
   display: inline-block;
   font-family: "Kaushan Script";
   font-size: 1.75em;
+  transition: font-size 0.3s linear;
+}
+
+.navbar-shrink {
+  background-color: #212529;
+  padding: 0 1em;
+}
+.navbar-shrink .navbar-brand {
+  font-size: 1.25em;
+  padding: 12px 0;
 }
 
 /* Hero */
