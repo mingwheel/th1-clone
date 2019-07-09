@@ -10,6 +10,10 @@
   --color-main: #fed135;
   --navbar-height: 54px;
 }
+html,
+body {
+  height: 100%;
+}
 
 body {
   font-family: "Roboto Slab", serif;
@@ -31,6 +35,15 @@ p {
   line-height: 1.75;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Text styles */
+.text-muted {
+  color: var(--color-muted);
+}
+
 /* Navbar */
 .navbar {
   transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -42,7 +55,6 @@ p {
 }
 .navbar a {
   color: #fff;
-  text-decoration: none;
 }
 .navbar > .container {
   align-items: center;
@@ -151,7 +163,6 @@ header.hero {
 }
 .section-subheading {
   flex-basis: 100%;
-  color: var(--color-muted);
   font-weight: 400;
   font-size: 16px;
   font-style: italic;
@@ -176,7 +187,6 @@ header.hero {
   color: var(--color-main);
 }
 .service-item p {
-  color: var(--color-muted);
   margin: 0 0 1rem;
 }
 
@@ -202,7 +212,88 @@ header.hero {
   margin: 0;
 }
 .portfolio-caption p {
-  color: var(--color-muted);
   font-style: italic;
   margin: 0;
+}
+
+/* Section - About */
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.timeline::before {
+  content: " ";
+  background-color: #e9ecef;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+}
+.timeline > li {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+/* Timeline Panel */
+.timeline-panel {
+  padding: 0 20px 20px;
+  text-align: right;
+  width: 41%;
+}
+.timeline-heading {
+  font-family: "Montserrat";
+}
+.timeline-heading > h4 {
+  margin: 0 0 0.5rem;
+}
+.timeline-body p {
+  margin: 0;
+}
+.timeline-inverted {
+  flex-direction: row-reverse;
+}
+.timeline-inverted .timeline-panel {
+  text-align: left;
+}
+
+/* Timeline image */
+.timeline-image {
+  border: 7px solid #e9ecef;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -75px;
+  position: absolute;
+  vertical-align: middle;
+  height: 150px;
+  width: 150px;
+}
+.timeline-image > img {
+  width: 100%;
+  border-radius: 50%;
+}
+.timeline-image:last-child {
+  background-color: var(--color-main);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.timeline-image:last-child h4 {
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0;
+}
+.timeline-image:last-child a {
+  color: #fff;
+}
+.timeline-image:last-child a:hover {
+  text-decoration: underline;
+  color: var(--color-muted);
 }

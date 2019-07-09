@@ -12,7 +12,7 @@ const portfolio_images = [
 ];
 /* Nav menu smooth scrolling */
 const scroll = new SmoothScroll(".js-scroll", {
-  speed: 1000,
+  speed: 500,
   easing: "easeInOutQuart"
 });
 
