@@ -20,15 +20,9 @@ body {
   overscroll-behavior-y: none;
 }
 
-.container {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1em;
-}
-
 h4 {
   font-size: 1.5rem;
+  font-family: "Montserrat";
 }
 
 p {
@@ -39,6 +33,16 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+}
+
+::selection {
+  background: var(--color-main);
+}
 /* Text styles */
 .text-muted {
   color: var(--color-muted);
@@ -172,7 +176,6 @@ header.hero {
 
 /* Section - Services */
 .service-heading {
-  font-family: "Montserrat";
   margin: 15px 0;
 }
 .service-item {
@@ -208,7 +211,6 @@ header.hero {
   text-align: center;
 }
 .portfolio-caption h4 {
-  font-family: "Montserrat";
   margin: 0;
 }
 .portfolio-caption p {
@@ -244,9 +246,6 @@ header.hero {
   text-align: right;
   width: 41%;
 }
-.timeline-heading {
-  font-family: "Montserrat";
-}
 .timeline-heading > h4 {
   margin: 0 0 0.5rem;
 }
@@ -263,7 +262,7 @@ header.hero {
 /* Timeline image */
 .timeline-image {
   border: 7px solid #e9ecef;
-  border-radius: 50%;
+  border-radius: 100%;
   left: 50%;
   margin-left: -75px;
   position: absolute;
@@ -273,7 +272,7 @@ header.hero {
 }
 .timeline-image > img {
   width: 100%;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 .timeline-image:last-child {
   background-color: var(--color-main);
@@ -284,7 +283,6 @@ header.hero {
 }
 .timeline-image:last-child h4 {
   color: #fff;
-  font-family: "Montserrat";
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
@@ -296,4 +294,61 @@ header.hero {
 .timeline-image:last-child a:hover {
   text-decoration: underline;
   color: var(--color-muted);
+}
+
+/* Team Styles */
+.team-member {
+  flex-basis: 33%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.team-member img {
+  border: 7px solid #e9ecef;
+  border-radius: 100%;
+}
+.team-member h4 {
+  margin: 25px 0 0;
+}
+.team-member p {
+  margin: 0 0 1rem;
+}
+.social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.social-links li {
+  display: inline-block;
+}
+.social-links li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.social-links li a {
+  background-color: #212529;
+  border-radius: 100%;
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  transition: background-color 0.3s;
+}
+.social-links li a:hover {
+  background-color: var(--color-main);
+}
+.team-message {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.team-message p {
+  padding: 0 15px;
+  margin: 0 0 1rem;
+  width: 66.66%;
+}
+
+/* Banner Styles */
+.banner {
+  padding: 3rem 0;
 }
