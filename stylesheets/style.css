@@ -239,6 +239,10 @@ header.hero {
   display: flex;
   margin-bottom: 100px;
 }
+.timeline li:last-child {
+  height: 150px;
+  margin: 0;
+}
 
 /* Timeline Panel */
 .timeline-panel {
